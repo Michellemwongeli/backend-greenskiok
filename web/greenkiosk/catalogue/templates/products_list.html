@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="head">
+<h1>WELCOME TO GREENS KIOSK GROCERIES</h1>
+<h4>FEED YOUR FAMILY THE BEST</h4>
+</div>
+<div class="row">
+{% for product in products %}
+<div class="col-lg-4">
+<div class="content">
+    <ul>
+    
+<img src="{{product.product_image.url}}" alt="image" />
+
+<p><a href="/products/{{product.id}}/">{{product.title }}</a></p>
+<p><a href="/products/{{product.id}}/">{{product.selling_price}}</a></p>
+<p><a href="/products/{{product.id}}/">{{product.description }}</a></p>
+
+    </ul>
+    </div>
+    </div>
+{% endfor %}
+
+</div>
+</body>
+<style>
+    img{
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        margin-left: -64px;
+        width: 230px;
+
+        
+        
+    }
+    .head{
+        color: rgb(128, 194, 29);
+        margin-left: 20px;
+        text-align: center;
+    }
+    .content{
+        margin-top: -4px;
+        text-color: black;
+        
+        
+    }
+</style>
+
+<html>
